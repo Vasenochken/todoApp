@@ -10,12 +10,19 @@ import './app.css';
 
 export default class App extends Component {
 
-    maxId = 100;
+    constructor(props) {
+        super(props);
+        this.state = {
+            todoData: [],
+            filter: 'all',
+        };
+    },
+    // state = {
+    //     todoData: [],
+    //     filter: 'all',
+    // },
 
-    state = {
-        todoData: [],
-        filter: 'all',
-    }
+    // maxId = 100
 
     onItemAdded = (text) => {
         const newItem = {

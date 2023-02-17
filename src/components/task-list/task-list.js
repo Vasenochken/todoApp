@@ -6,7 +6,7 @@ import './task-list.css';
 
 export default class TaskList extends Component {
   render() {
-    const { todoData, onDeleted, onCompleted, updateEdit } = this.props
+    const { todoData, onDeleted, onCompleted, updateEdit } = this.props;
     return (
       <ul className="todo-list">
         {todoData.map(({ ...item }) => {
@@ -22,9 +22,9 @@ export default class TaskList extends Component {
               onCompleted={onCompleted}
               updateEdit={updateEdit}
             />
-          )
+          );
         })}
       </ul>
-    )
+    );
   }
 }
