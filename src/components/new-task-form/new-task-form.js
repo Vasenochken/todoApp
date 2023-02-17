@@ -2,9 +2,12 @@ import { Component } from 'react';
 import './new-task-form.css';
 
 export default class NewTaskForm extends Component {
-  state = {
-    label: '',
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      label: '',
+    };
+  }
 
   onLabelChange = (event) => {
     this.setState({
@@ -16,7 +19,7 @@ export default class NewTaskForm extends Component {
     event.preventDefault();
 
     if (this.state.label.trim()) this.props.onItemAdded(this.state.label);
-    else alert("O_0ps! You didn't finish the task");
+    else alert('O_0ps! You didn`t finish the task');
 
     this.setState({
       label: '',

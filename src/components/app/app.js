@@ -1,10 +1,8 @@
 import { Component } from 'react';
 
-import NewTaskForm from '../new-task-form';
-
-import TaskList from '../task-list';
-
-import Footer from '../footer';
+import NewTaskForm from '../new-task-form/new-task-form.js';
+import TaskList from '../task-list/task-list.js';
+import Footer from '../footer/footer.js';
 
 import './app.css';
 
@@ -17,7 +15,7 @@ export default class App extends Component {
     };
   }
 
-  maxId = 100;
+  // maxId = 100;
 
   onItemAdded = (text) => {
     const newItem = {
